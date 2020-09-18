@@ -1606,75 +1606,78 @@
         </settings>
     </configuration>
     <group>
-        <name>Library</name>
+        <name>Inc</name>
         <file>
-            <name>$PROJ_DIR$\Buttons.c</name>
+            <name>$PROJ_DIR$\Inc\Buttons.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\Buttons.h</name>
+            <name>$PROJ_DIR$\Inc\font6x8.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\fontNumbers.h</name>
+            <name>$PROJ_DIR$\Inc\fontNumbers.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\nokia.c</name>
+            <name>$PROJ_DIR$\Inc\nokia.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\nokia.h</name>
+            <name>$PROJ_DIR$\Inc\nokia_fastGFX.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\nokia_fastGFX.c</name>
+            <name>$PROJ_DIR$\Inc\nokia_gfx.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\nokia_fastGFX.h</name>
+            <name>$PROJ_DIR$\Inc\PingPong.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\nokia_gfx.c</name>
+            <name>$PROJ_DIR$\Inc\Snake.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\nokia_gfx.h</name>
+            <name>$PROJ_DIR$\Inc\Sprites.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\PingPong.c</name>
+            <name>$PROJ_DIR$\Inc\Tetris.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\PingPong.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Snake.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Snake.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Snake_old.c</name>
-            <excluded>
-                <configuration>Debug</configuration>
-            </excluded>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sprites.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Tetris.c</name>
-            <excluded>
-                <configuration>Debug</configuration>
-            </excluded>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Tetris.h</name>
-            <excluded>
-                <configuration>Debug</configuration>
-            </excluded>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\tim4millis.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\tim4millis.h</name>
+            <name>$PROJ_DIR$\Inc\tim4millis.h</name>
         </file>
     </group>
-    <file>
-        <name>$PROJ_DIR$\main.c</name>
-    </file>
+    <group>
+        <name>Src</name>
+        <file>
+            <name>$PROJ_DIR$\Src\Buttons.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Src\main.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Src\nokia.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Src\nokia_fastGFX.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Src\nokia_gfx.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Src\PingPong.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Src\Snake.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Src\Snake_old.c</name>
+            <excluded>
+                <configuration>Debug</configuration>
+            </excluded>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Src\Tetris.c</name>
+            <excluded>
+                <configuration>Debug</configuration>
+            </excluded>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Src\tim4millis.c</name>
+        </file>
+    </group>
 </project>
