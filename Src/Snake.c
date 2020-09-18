@@ -141,7 +141,7 @@ void start_snake(void){
   KEY_STATE current_key = None, prev_key = None;
   
   struct additional_data states;
-  states.IsDirectionChanged = 0; 
+  states.IsDirectionChanged = 0;
   states.speed = 7; 
   states.needApple = 1;
   

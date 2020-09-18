@@ -96,7 +96,7 @@ void drawCircle(uint8_t x0, uint8_t y0, uint8_t r, uint8_t color) {
     nokia_draw_pixel(x0 - y, y0 + x, color);
     nokia_draw_pixel(x0 + y, y0 - x, color);
     nokia_draw_pixel(x0 - y, y0 - x, color);
-  } 
+  }
 }
 
 

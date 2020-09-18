@@ -8,7 +8,7 @@
 void drawScore(const uint8_t x, const uint8_t y, const uint16_t score){
   if (score > 999) return;
   
-  uint8_t hun = score / 100; 
+  uint8_t hun = score / 100;
   uint8_t dec = (score % 100) / 10;
   uint8_t one = score % 10;
   

@@ -257,6 +257,8 @@
                 <option>
                     <name>CCIncludePath2</name>
                     <state>D:\Study\MC\STM8_SNAKE</state>
+                    <state>D:\Study\MC\STM8_TEST\STM8_SNAKE\Src</state>
+                    <state>D:\Study\MC\STM8_TEST\STM8_SNAKE\Inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1655,9 +1657,15 @@
         </file>
         <file>
             <name>$PROJ_DIR$\Tetris.c</name>
+            <excluded>
+                <configuration>Debug</configuration>
+            </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\Tetris.h</name>
+            <excluded>
+                <configuration>Debug</configuration>
+            </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\tim4millis.c</name>

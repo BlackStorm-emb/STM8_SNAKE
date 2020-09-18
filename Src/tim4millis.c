@@ -40,7 +40,7 @@ void TIM4_init(void)
         asm("rim");
 
 	/* Enable TIM4 */
-        TIM4_CR1_CEN = 1; 
+        TIM4_CR1_CEN = 1;
   
 }
 

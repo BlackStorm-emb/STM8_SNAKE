@@ -66,7 +66,7 @@ void start_pingPong() {
   uint8_t scorePlayer = 0, scoreBot = 0;
     
   struct additional_data states;
-  Direction_typedef direction = LEFT_UP; 
+  Direction_typedef direction = LEFT_UP;
   KEY_STATE current_key = None;
   
   states.speed = 13;
