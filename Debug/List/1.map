@@ -1,0 +1,552 @@
+###############################################################################
+#
+# IAR ELF Linker V3.10.1.201 for STM8                     12/Sep/2020  20:17:27
+# Copyright 2010-2017 IAR Systems AB.
+#
+#    Output file  =  D:\Study\MC\STM8_SNAKE\Debug\Exe\1.out
+#    Map file     =  D:\Study\MC\STM8_SNAKE\Debug\List\1.map
+#    Command line =  
+#        -f C:\Users\8CC9~1\AppData\Local\Temp\EW84E8.tmp
+#        (D:\Study\MC\STM8_SNAKE\Debug\Obj\Buttons.o
+#        D:\Study\MC\STM8_SNAKE\Debug\Obj\main.o
+#        D:\Study\MC\STM8_SNAKE\Debug\Obj\nokia.o
+#        D:\Study\MC\STM8_SNAKE\Debug\Obj\nokia_fastGFX.o
+#        D:\Study\MC\STM8_SNAKE\Debug\Obj\nokia_gfx.o
+#        D:\Study\MC\STM8_SNAKE\Debug\Obj\PingPong.o
+#        D:\Study\MC\STM8_SNAKE\Debug\Obj\Snake.o
+#        D:\Study\MC\STM8_SNAKE\Debug\Obj\Tetris.o
+#        D:\Study\MC\STM8_SNAKE\Debug\Obj\tim4millis.o --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb -o
+#        D:\Study\MC\STM8_SNAKE\Debug\Exe\1.out --map
+#        D:\Study\MC\STM8_SNAKE\Debug\List\1.map --config
+#        D:\Program\IAR_STM8\stm8\config\lnkstm8s103f3.icf --config_def
+#        _CSTACK_SIZE=0x100 --config_def _HEAP_SIZE=0x00 --entry
+#        __iar_program_start --debug_lib)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+__SystemLibrary            = DLib
+__code_model               = small
+__core                     = stm8
+__data_model               = medium
+__dlib_file_descriptor     = 0
+__dlib_full_locale_support = 0
+__rt_version               = 4
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at start of [0x000000-0x0000ff] { rw section .vregs };
+"A1":  place at end of [0x000000-0x0003ff] { block CSTACK };
+"P2":  place in [from 0x000000 to 0x0003ff] {
+          block HEAP, rw section __DLIB_PERTHREAD, rw section .far.bss,
+          rw section .far.data, rw section .far.noinit,
+          rw section .far_func.textrw, rw section .huge.bss,
+          rw section .huge.data, rw section .huge.noinit,
+          rw section .huge_func.textrw, rw section .iar.dynexit,
+          rw section .near.bss, rw section .near.data, rw section .near.noinit,
+          rw section .near_func.textrw };
+"A2":  place at start of [0x008000-0x009fff] { block INTVEC };
+"P3":  place in [from 0x008000 to 0x009fff] {
+          ro section __DLIB_PERTHREAD_init, ro section .far.data_init,
+          ro section .far_func.textrw_init, ro section .huge.data_init,
+          ro section .huge_func.textrw_init, ro section .iar.init_table,
+          ro section .init_array, ro section .near.data_init,
+          ro section .near.rodata, ro section .near_func.text,
+          ro section .near_func.textrw_init, ro section .tiny.data_init,
+          ro section .tiny.rodata_init };
+"P4":  place in [from 0x008000 to 0x009fff] {
+          ro section .far.rodata, ro section .far_func.text };
+"P5":  place in [from 0x008000 to 0x009fff] {
+          ro section .huge.rodata, ro section .huge_func.text };
+do not initialize {
+   rw section .eeprom.noinit, rw section .far.noinit, rw section .huge.noinit,
+   rw section .near.noinit, rw section .tiny.noinit, rw section .vregs };
+initialize by copy {
+   rw section .far.bss, rw section .far.data, rw section .far_func.textrw,
+   rw section .huge.bss, rw section .huge.data, rw section .huge_func.textrw,
+   rw section .iar.dynexit, rw section .near.bss, rw section .near.data,
+   rw section .near_func.textrw, rw section .tiny.bss, rw section .tiny.data,
+   ro section .tiny.rodata };
+
+  Section            Kind      Address    Size  Object
+  -------            ----      -------    ----  ------
+"A0":                                     0x10
+  .vregs             uninit   0x000000    0x10  vregs.o [4]
+                            - 0x000010    0x10
+
+"P2", part 1 of 3:                         0x4
+  P2-1                        0x000010     0x4  <Init block>
+    .near.data       inited   0x000010     0x4  rand.o [4]
+                            - 0x000014     0x4
+
+"P2", part 2 of 3:                        0x94
+  .near.bss          zero     0x000014    0x80  rand.o [4]
+  .near.bss          zero     0x000094     0x4  tim4millis.o [1]
+  .near.bss          zero     0x000098     0x4  rand.o [4]
+  .near.bss          zero     0x00009c     0x2  main.o [1]
+  .near.bss          zero     0x00009e     0x2  rand.o [4]
+  .near.bss          zero     0x0000a0     0x2  rand.o [4]
+  .near.bss          zero     0x0000a2     0x2  rand.o [4]
+  .near.bss          zero     0x0000a4     0x2  rand.o [4]
+  .near.bss          zero     0x0000a6     0x1  Snake.o [1]
+  .near.bss          zero     0x0000a7     0x1  rand.o [4]
+                            - 0x0000a8    0x94
+
+"P2", part 3 of 3:                       0x1f8
+  .near.bss          zero     0x0000a8   0x1f8  nokia.o [1]
+                            - 0x0002a0   0x1f8
+
+"A1":                                    0x100
+  CSTACK                      0x000300   0x100  <Block>
+    CSTACK           uninit   0x000300   0x100  <Block tail>
+                            - 0x000400   0x100
+
+Absolute sections, part 1 of 9:            0x4
+  .near.noinit       uninit   0x005001     0x1  Buttons.o [1]
+  .near.noinit       uninit   0x005002     0x1  Buttons.o [1]
+  .near.noinit       uninit   0x005003     0x1  Buttons.o [1]
+  .near.noinit       uninit   0x005004     0x1  Buttons.o [1]
+                            - 0x005005     0x4
+
+Absolute sections, part 2 of 9:            0x1
+  .near.noinit       uninit   0x00500a     0x1  nokia.o [1]
+                            - 0x00500b     0x1
+
+Absolute sections, part 3 of 9:            0x8
+  .near.noinit       uninit   0x00500c     0x1  nokia.o [1]
+  .near.noinit       uninit   0x00500d     0x1  nokia.o [1]
+  .near.noinit       uninit   0x00500e     0x1  nokia.o [1]
+  .near.noinit       uninit   0x00500f     0x1  nokia.o [1]
+  .near.noinit       uninit   0x005010     0x1  Buttons.o [1]
+  .near.noinit       uninit   0x005011     0x1  nokia.o [1]
+  .near.noinit       uninit   0x005012     0x1  nokia.o [1]
+  .near.noinit       uninit   0x005013     0x1  nokia.o [1]
+                            - 0x005014     0x8
+
+Absolute sections, part 4 of 9:            0x1
+  .near.noinit       uninit   0x0050c6     0x1  main.o [1]
+                            - 0x0050c7     0x1
+
+Absolute sections, part 5 of 9:            0x1
+  .near.noinit       uninit   0x005340     0x1  tim4millis.o [1]
+                            - 0x005341     0x1
+
+Absolute sections, part 6 of 9:            0x2
+  .near.noinit       uninit   0x005343     0x1  tim4millis.o [1]
+  .near.noinit       uninit   0x005344     0x1  tim4millis.o [1]
+                            - 0x005345     0x2
+
+Absolute sections, part 7 of 9:            0x2
+  .near.noinit       uninit   0x005346     0x1  tim4millis.o [1]
+  .near.noinit       uninit   0x005347     0x1  tim4millis.o [1]
+                            - 0x005348     0x2
+
+Absolute sections, part 8 of 9:            0x2
+  .near.noinit       uninit   0x005400     0x1  Snake.o [1]
+  .near.noinit       uninit   0x005401     0x1  Snake.o [1]
+                            - 0x005402     0x2
+
+Absolute sections, part 9 of 9:            0x2
+  .near.noinit       uninit   0x005404     0x1  Snake.o [1]
+  .near.noinit       uninit   0x005405     0x1  Snake.o [1]
+                            - 0x005406     0x2
+
+"A2":                                     0x80
+  INTVEC                      0x008000    0x80  <Block>
+    .intvec          const    0x008000    0x80  interrupt.o [4]
+                            - 0x008080    0x80
+
+"P3-P5":                                0x165e
+  .near_func.text    ro code  0x008080   0x249  PingPong.o [1]
+  .near_func.text    ro code  0x0082c9   0x22d  Snake.o [1]
+  .near.rodata       const    0x0084f6   0x210  main.o [1]
+  .near_func.text    ro code  0x008706   0x12a  nokia_gfx.o [1]
+  .near_func.text    ro code  0x008830    0xfc  main.o [1]
+  .near_func.text    ro code  0x00892c    0xfb  long.o [4]
+  .near_func.text    ro code  0x008a27    0xf3  vreg_util.o [4]
+  .near_func.text    ro code  0x008b1a    0xf0  nokia_fastGFX.o [1]
+  .near_func.text    ro code  0x008c0a    0xde  nokia.o [1]
+  .near_func.text    ro code  0x008ce8    0xa7  Snake.o [1]
+  .near_func.text    ro code  0x008d8f    0x94  rand.o [4]
+  .near_func.text    ro code  0x008e23    0x8f  main.o [1]
+  .near_func.text    ro code  0x008eb2    0x8b  nokia_gfx.o [1]
+  .near_func.text    ro code  0x008f3d    0x73  long_util.o [4]
+  .near_func.text    ro code  0x008fb0    0x71  Snake.o [1]
+  .near.rodata       const    0x009021    0x64  nokia_fastGFX.o [1]
+  .near_func.text    ro code  0x009085    0x61  Snake.o [1]
+  .near_func.text    ro code  0x0090e6    0x5c  nokia.o [1]
+  .near_func.text    ro code  0x009142    0x59  nokia_gfx.o [1]
+  .near_func.text    ro code  0x00919b    0x57  short.o [4]
+  .near_func.text    ro code  0x0091f2    0x53  PingPong.o [1]
+  .near_func.text    ro code  0x009245    0x3d  nokia.o [1]
+  .near_func.text    ro code  0x009282    0x3b  Buttons.o [1]
+  .near.rodata       const    0x0092bd    0x37  Snake.o [1]
+  .near_func.text    ro code  0x0092f4    0x36  nokia.o [1]
+  .near_func.text    ro code  0x00932a    0x36  Snake.o [1]
+  .near_func.text    ro code  0x009360    0x34  Snake.o [1]
+  .near_func.text    ro code  0x009394    0x33  Snake.o [1]
+  .near_func.text    ro code  0x0093c7    0x31  Buttons.o [1]
+  .near_func.text    ro code  0x0093f8    0x2a  Snake.o [1]
+  .near_func.text    ro code  0x009422    0x29  nokia.o [1]
+  .near_func.text    ro code  0x00944b    0x28  nokia.o [1]
+  .near_func.text    ro code  0x009473    0x28  init_small.o [4]
+  .near_func.text    ro code  0x00949b    0x27  srand.o [4]
+  .near_func.text    ro code  0x0094c2    0x26  Tetris.o [1]
+  .near_func.text    ro code  0x0094e8    0x25  char.o [4]
+  .near_func.text    ro code  0x00950d    0x21  Snake.o [1]
+  .iar.init_table    const    0x00952e    0x16  - Linker created -
+  .near_func.text    ro code  0x009544    0x20  nokia.o [1]
+  .near_func.text    ro code  0x009564    0x1e  init_small.o [4]
+  .near_func.text    ro code  0x009582    0x1b  PingPong.o [1]
+  .near_func.text    ro code  0x00959d    0x1a  tim4millis.o [1]
+  .near_func.text    ro code  0x0095b7    0x1a  rand.o [4]
+  .near_func.text    ro code  0x0095d1    0x18  nokia.o [1]
+  .near_func.text    ro code  0x0095e9    0x16  tim4millis.o [1]
+  .near_func.text    ro code  0x0095ff    0x14  init.o [4]
+  .near_func.text    ro code  0x009613    0x14  __dbg_xxexit.o [3]
+  .near_func.text    ro code  0x009627    0x13  cstartup.o [4]
+  .near_func.text    ro code  0x00963a    0x12  PingPong.o [1]
+  .near_func.text    ro code  0x00964c     0xe  nokia.o [1]
+  .near_func.text    ro code  0x00965a     0xe  nokia_gfx.o [1]
+  .near_func.text    ro code  0x009668     0xd  move.o [4]
+  .near_func.text    ro code  0x009675     0xb  abs.o [4]
+  .near_func.text    ro code  0x009680     0xb  dc_util.o [4]
+  .near.rodata       const    0x00968b     0xa  main.o [1]
+  .near_func.text    ro code  0x009695     0x9  rand.o [4]
+  .near_func.text    ro code  0x00969e     0x7  nokia.o [1]
+  .near_func.text    ro code  0x0096a5     0x7  nokia.o [1]
+  .near_func.text    ro code  0x0096ac     0x6  tim4millis.o [1]
+  .near_func.text    ro code  0x0096b2     0x5  cexit.o [4]
+  .near.rodata       const    0x0096b7     0x4  Snake.o [1]
+  .near.rodata       const    0x0096bb     0x4  Snake.o [1]
+  .near.rodata       const    0x0096bf     0x4  Snake.o [1]
+  .near.rodata       const    0x0096c3     0x4  Snake.o [1]
+  Initializer bytes  const    0x0096c7     0x4  <for P2-1>
+  .near.rodata       const    0x0096cb     0x3  PingPong.o [1]
+  .near_func.text    ro code  0x0096ce     0x3  interrupt.o [4]
+  .near_func.text    ro code  0x0096d1     0x3  low_level_init.o [4]
+  .near_func.text    ro code  0x0096d4     0x3  exit.o [4]
+  .near_func.text    ro code  0x0096d7     0x3  unhandled_exception.o [4]
+  .near.rodata       const    0x0096da     0x2  main.o [1]
+  .near.rodata       const    0x0096dc     0x1  main.o [1]
+  .near_func.text    ro code  0x0096dd     0x1  __dbg_break.o [3]
+                            - 0x0096de  0x165e
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address   Size
+          -------   ----
+Zero (__iar_zero_init2)
+    2 destination ranges, total size 0x28c:
+          0x000014   0x94
+          0x0000a8  0x1f8
+
+Copy (__iar_copy_init2)
+    1 source range, total size 0x4:
+          0x0096c7    0x4
+    1 destination range, total size 0x4:
+          0x000010    0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data  rw data
+                                                       (abs)
+    ------                 -------  -------  -------  -------
+D:\Study\MC\STM8_SNAKE\Debug\Obj: [1]
+    Buttons.o                  108                          5
+    PingPong.o                 713        3
+    Snake.o                  1 166       71        1        4
+    Tetris.o                    38
+    main.o                     395      541        2        1
+    nokia.o                    594               504        8
+    nokia_fastGFX.o            240      100
+    nokia_gfx.o                540
+    tim4millis.o                54                 4        5
+    ---------------------------------------------------------
+    Total:                   3 848      715      511       23
+
+command line: [2]
+    ---------------------------------------------------------
+    Total:
+
+dbgstm8smd.a: [3]
+    __dbg_break.o                1
+    __dbg_xxexit.o              20
+    ---------------------------------------------------------
+    Total:                      21
+
+dlstm8smn.a: [4]
+    abs.o                       11
+    cexit.o                      5
+    char.o                      37
+    cstartup.o                  19
+    dc_util.o                   11
+    exit.o                       3
+    init.o                      20
+    init_small.o                70
+    interrupt.o                  3      128
+    long.o                     251
+    long_util.o                115
+    low_level_init.o             3
+    move.o                      13
+    rand.o                     183        4      145
+    short.o                     87
+    srand.o                     39
+    unhandled_exception.o        3
+    vreg_util.o                243
+    vregs.o                                       16
+    ---------------------------------------------------------
+    Total:                   1 116      132      161
+
+    Linker created                       22      256
+-------------------------------------------------------------
+    Grand Total:             4 985      869      928       23
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address   Size  Type      Object
+-----                    -------   ----  ----      ------
+.iar.init_table$$Base   0x00952e          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x009544          --   Gb  - Linker created -
+?add32_l0_l0_0x         0x008944         Code  Gb  long.o [4]
+?add32_l0_l0_dl         0x00893f         Code  Gb  long.o [4]
+?b0                     0x000000         Data  Gb  vregs.o [4]
+?b1                     0x000001         Data  Gb  vregs.o [4]
+?b10                    0x00000a         Data  Gb  vregs.o [4]
+?b11                    0x00000b         Data  Gb  vregs.o [4]
+?b12                    0x00000c         Data  Gb  vregs.o [4]
+?b13                    0x00000d         Data  Gb  vregs.o [4]
+?b14                    0x00000e         Data  Gb  vregs.o [4]
+?b15                    0x00000f         Data  Gb  vregs.o [4]
+?b2                     0x000002         Data  Gb  vregs.o [4]
+?b3                     0x000003         Data  Gb  vregs.o [4]
+?b4                     0x000004         Data  Gb  vregs.o [4]
+?b5                     0x000005         Data  Gb  vregs.o [4]
+?b6                     0x000006         Data  Gb  vregs.o [4]
+?b7                     0x000007         Data  Gb  vregs.o [4]
+?b8                     0x000008         Data  Gb  vregs.o [4]
+?b9                     0x000009         Data  Gb  vregs.o [4]
+?dc32_px                0x009680         Code  Gb  dc_util.o [4]
+?e0                     0x000001         Data  Gb  vregs.o [4]
+?e1                     0x000005         Data  Gb  vregs.o [4]
+?e2                     0x000009         Data  Gb  vregs.o [4]
+?e3                     0x00000d         Data  Gb  vregs.o [4]
+?epilogue_l2            0x008abd         Code  Gb  vreg_util.o [4]
+?epilogue_l2_l3         0x008aba         Code  Gb  vreg_util.o [4]
+?epilogue_l2_w6         0x008ac1         Code  Gb  vreg_util.o [4]
+?epilogue_w4            0x008ac8         Code  Gb  vreg_util.o [4]
+?inc32_0x_0x            0x008931         Code  Gb  long.o [4]
+?inc32_l0_l0            0x00892c         Code  Gb  long.o [4]
+?l0                     0x000000         Data  Gb  vregs.o [4]
+?l1                     0x000004         Data  Gb  vregs.o [4]
+?l2                     0x000008         Data  Gb  vregs.o [4]
+?l3                     0x00000c         Data  Gb  vregs.o [4]
+?load32_0x_l0           0x008f86         Code  Gb  long_util.o [4]
+?load32_0x_l1           0x008f94         Code  Gb  long_util.o [4]
+?load32_0x_l2           0x008fa2         Code  Gb  long_util.o [4]
+?load32_asp_l0          0x008f7a         Code  Gb  long_util.o [4]
+?load32_dbsp_l0         0x008f75         Code  Gb  long_util.o [4]
+?load32_l0_0x           0x008f4d         Code  Gb  long_util.o [4]
+?load32_l0_asp          0x008f42         Code  Gb  long_util.o [4]
+?load32_l0_dbsp         0x008f3d         Code  Gb  long_util.o [4]
+?load32_l0_xsp          0x008f44         Code  Gb  long_util.o [4]
+?load32_l1_0x           0x008f69         Code  Gb  long_util.o [4]
+?load32_l1_asp          0x008f5e         Code  Gb  long_util.o [4]
+?load32_l1_dbsp         0x008f59         Code  Gb  long_util.o [4]
+?load32_l1_xsp          0x008f60         Code  Gb  long_util.o [4]
+?load32_xsp_l0          0x008f7c         Code  Gb  long_util.o [4]
+?mov_e0_e2              0x008acf         Code  Gb  vreg_util.o [4]
+?mov_e1_e0              0x008adc         Code  Gb  vreg_util.o [4]
+?mov_e1_e2              0x008ae9         Code  Gb  vreg_util.o [4]
+?mov_e1_e3              0x008af6         Code  Gb  vreg_util.o [4]
+?mov_e2_e0              0x008b03         Code  Gb  vreg_util.o [4]
+?mov_e3_e0              0x008b10         Code  Gb  vreg_util.o [4]
+?mov_l0_l2              0x008acc         Code  Gb  vreg_util.o [4]
+?mov_l1_l0              0x008ad9         Code  Gb  vreg_util.o [4]
+?mov_l1_l2              0x008ae6         Code  Gb  vreg_util.o [4]
+?mov_l1_l3              0x008af3         Code  Gb  vreg_util.o [4]
+?mov_l2_l0              0x008b00         Code  Gb  vreg_util.o [4]
+?mov_l3_l0              0x008b0d         Code  Gb  vreg_util.o [4]
+?mov_w1_w5              0x008ad2         Code  Gb  vreg_util.o [4]
+?mov_w3_w1              0x008adf         Code  Gb  vreg_util.o [4]
+?mov_w3_w5              0x008aec         Code  Gb  vreg_util.o [4]
+?mov_w3_w7              0x008af9         Code  Gb  vreg_util.o [4]
+?mov_w5_w1              0x008b06         Code  Gb  vreg_util.o [4]
+?mov_w7_w1              0x008b13         Code  Gb  vreg_util.o [4]
+?move1616_v_x_y_a       0x009668         Code  Gb  move.o [4]
+?mul16_x_x_w0           0x00919b         Code  Gb  short.o [4]
+?mul32_l0_l0_0x         0x00897a         Code  Gb  long.o [4]
+?mul32_l0_l0_dl         0x008977         Code  Gb  long.o [4]
+?mul32_l0_l0_l1         0x008983         Code  Gb  long.o [4]
+?pop_l0                 0x008a86         Code  Gb  vreg_util.o [4]
+?pop_l1                 0x008a91         Code  Gb  vreg_util.o [4]
+?pop_l2                 0x008a9c         Code  Gb  vreg_util.o [4]
+?pop_l3                 0x008aa7         Code  Gb  vreg_util.o [4]
+?pop_w4                 0x008a44         Code  Gb  vreg_util.o [4]
+?pop_w6                 0x008a4b         Code  Gb  vreg_util.o [4]
+?push_l0                0x008a5a         Code  Gb  vreg_util.o [4]
+?push_l2                0x008a5f         Code  Gb  vreg_util.o [4]
+?push_l3                0x008a64         Code  Gb  vreg_util.o [4]
+?push_w4                0x008a27         Code  Gb  vreg_util.o [4]
+?push_w6                0x008a2c         Code  Gb  vreg_util.o [4]
+?sdiv16_x_x_y           0x0091b9         Code  Gb  short.o [4]
+?sdiv8_xl_a_b0          0x0094e8         Code  Gb  char.o [4]
+?sext32_l0_x            0x008a1c         Code  Gb  long.o [4]
+?sll16_x_x_a            0x0091e2         Code  Gb  short.o [4]
+?sll8_a_a_5             0x009502         Code  Gb  char.o [4]
+?smod16_y_x_y           0x0091d2         Code  Gb  short.o [4]
+?sra16_x_x_a            0x0091ea         Code  Gb  short.o [4]
+?srl8_a_a_5             0x009508         Code  Gb  char.o [4]
+?srl8_a_a_6             0x009507         Code  Gb  char.o [4]
+?sub32_l0_l0_0x         0x00895f         Code  Gb  long.o [4]
+?sub32_l0_l0_l1         0x00895c         Code  Gb  long.o [4]
+?ucmp32_c_l0_0x         0x008a01         Code  Gb  long.o [4]
+?ucmp32_c_l0_l1         0x008a11         Code  Gb  long.o [4]
+?w0                     0x000000         Data  Gb  vregs.o [4]
+?w1                     0x000002         Data  Gb  vregs.o [4]
+?w2                     0x000004         Data  Gb  vregs.o [4]
+?w3                     0x000006         Data  Gb  vregs.o [4]
+?w4                     0x000008         Data  Gb  vregs.o [4]
+?w5                     0x00000a         Data  Gb  vregs.o [4]
+?w6                     0x00000c         Data  Gb  vregs.o [4]
+?w7                     0x00000e         Data  Gb  vregs.o [4]
+ADC_DRH                 0x005404    0x1  Data  Gb  Snake.o [1]
+ADC_DRL                 0x005405    0x1  Data  Gb  Snake.o [1]
+Apple_Sprite_4x4        0x0096bb    0x4  Data  Gb  Snake.o [1]
+Ball_Sprite_3x3         0x0096cb    0x3  Data  Gb  PingPong.o [1]
+CSTACK$$Base            0x000300          --   Gb  - Linker created -
+CSTACK$$Limit           0x000400          --   Gb  - Linker created -
+Font                    0x009021   0x64  Data  Gb  nokia_fastGFX.o [1]
+INTVEC$$Base            0x008000          --   Gb  - Linker created -
+INTVEC$$Limit           0x008080          --   Gb  - Linker created -
+MenuStates              0x00009c    0x2  Data  Gb  main.o [1]
+Region$$Table$$Base     0x00952e          --   Gb  - Linker created -
+Region$$Table$$Limit    0x009544          --   Gb  - Linker created -
+Snake_Sprite_4x4        0x0096b7    0x4  Data  Gb  Snake.o [1]
+TIM4_CNTR               0x005346    0x1  Data  Gb  tim4millis.o [1]
+TIM4_OVF                0x00959d   0x1a  Code  Gb  tim4millis.o [1]
+TIM4_init               0x0095e9   0x16  Code  Gb  tim4millis.o [1]
+_A_ADC_CR1              0x005401    0x1  Data  Gb  Snake.o [1]
+_A_ADC_CSR              0x005400    0x1  Data  Gb  Snake.o [1]
+_A_CLK_CKDIVR           0x0050c6    0x1  Data  Gb  main.o [1]
+_A_PA_CR1               0x005003    0x1  Data  Gb  Buttons.o [1]
+_A_PA_CR2               0x005004    0x1  Data  Gb  Buttons.o [1]
+_A_PA_DDR               0x005002    0x1  Data  Gb  Buttons.o [1]
+_A_PA_IDR               0x005001    0x1  Data  Gb  Buttons.o [1]
+_A_PC_CR1               0x00500d    0x1  Data  Gb  nokia.o [1]
+_A_PC_CR2               0x00500e    0x1  Data  Gb  nokia.o [1]
+_A_PC_DDR               0x00500c    0x1  Data  Gb  nokia.o [1]
+_A_PC_ODR               0x00500a    0x1  Data  Gb  nokia.o [1]
+_A_PD_CR1               0x005012    0x1  Data  Gb  nokia.o [1]
+_A_PD_CR2               0x005013    0x1  Data  Gb  nokia.o [1]
+_A_PD_DDR               0x005011    0x1  Data  Gb  nokia.o [1]
+_A_PD_IDR               0x005010    0x1  Data  Gb  Buttons.o [1]
+_A_PD_ODR               0x00500f    0x1  Data  Gb  nokia.o [1]
+_A_TIM4_CR1             0x005340    0x1  Data  Gb  tim4millis.o [1]
+_A_TIM4_IER             0x005343    0x1  Data  Gb  tim4millis.o [1]
+_A_TIM4_PSCR            0x005347    0x1  Data  Gb  tim4millis.o [1]
+_A_TIM4_SR              0x005344    0x1  Data  Gb  tim4millis.o [1]
+_Rand_idx               0x000098    0x4  Data  Lc  rand.o [4]
+_Rand_rv                0x000014   0x80  Data  Lc  rand.o [4]
+_Randinit               0x0000a7    0x1  Data  Gb  rand.o [4]
+_Randseed               0x000010    0x4  Data  Gb  rand.o [4]
+__DebugBreak            0x0096dd    0x1  Code  Gb  __dbg_break.o [3]
+__exit                  0x009613   0x14  Code  Gb  __dbg_xxexit.o [3]
+__iar_Tls_setup__Rand_idx
+                        0x0000a2    0x2  Data  Lc  rand.o [4]
+__iar_Tls_setup__Rand_rv
+                        0x0000a4    0x2  Data  Lc  rand.o [4]
+__iar_Tls_setup__Randinit
+                        0x00009e    0x2  Data  Gb  rand.o [4]
+__iar_Tls_setup__Randseed
+                        0x0000a0    0x2  Data  Gb  rand.o [4]
+__iar_copy_init2        0x009473         Code  Gb  init_small.o [4]
+__iar_data_init2        0x0095ff   0x14  Code  Gb  init.o [4]
+__iar_program_start     0x009627         Code  Gb  cstartup.o [4]
+__iar_unhandled_exception
+                        0x0096d7         Code  Gb  unhandled_exception.o [4]
+__iar_zero_init2        0x009564         Code  Gb  init_small.o [4]
+__intvec                0x008000         Data  Gb  interrupt.o [4]
+__low_level_init        0x0096d1    0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x0096b2         Code  Gb  cexit.o [4]
+_interrupt_25           0x00959d         Code  Gb  tim4millis.o [1]
+_swap_uint8_t           0x00965a    0xe  Code  Gb  nokia_gfx.o [1]
+abs                     0x009675    0xb  Code  Gb  abs.o [4]
+arrow_sprite_9x5        0x00968b    0xa  Data  Gb  main.o [1]
+blink_interval          0x0096da    0x2  Data  Gb  main.o [1]
+buffer                  0x0000a8  0x1f8  Data  Gb  nokia.o [1]
+button_interval         0x0096dc    0x1  Data  Gb  main.o [1]
+checkBorder             0x0093f8   0x2a  Code  Gb  Snake.o [1]
+checkSnakeCollision     0x00950d   0x21  Code  Gb  Snake.o [1]
+current_millis          0x000094    0x4  Data  Gb  tim4millis.o [1]
+drawArea                0x0091f2   0x53  Code  Gb  PingPong.o [1]
+drawBall                0x009582   0x1b  Code  Gb  PingPong.o [1]
+drawBitmap              0x008eb2   0x8b  Code  Gb  nokia_gfx.o [1]
+drawFastHLine           0x008808   0x14  Code  Gb  nokia_gfx.o [1]
+drawFastVLine           0x00881c   0x14  Code  Gb  nokia_gfx.o [1]
+drawLine                0x008706  0x102  Code  Gb  nokia_gfx.o [1]
+drawMenu                0x008e23   0x8f  Code  Gb  main.o [1]
+drawPlatform            0x00963a   0x12  Code  Gb  PingPong.o [1]
+drawRect                0x009142   0x59  Code  Gb  nokia_gfx.o [1]
+drawScore               0x008b1a   0xf0  Code  Gb  nokia_fastGFX.o [1]
+draw_apple              0x009360   0x34  Code  Gb  Snake.o [1]
+draw_snake              0x008ce8   0xa7  Code  Gb  Snake.o [1]
+exit                    0x0096d4    0x3  Code  Gb  exit.o [4]
+generate_apple          0x009085   0x61  Code  Gb  Snake.o [1]
+init_buttons            0x0093c7   0x31  Code  Gb  Buttons.o [1]
+init_gpio               0x009245   0x3d  Code  Gb  nokia.o [1]
+main                    0x008830   0xfc  Code  Gb  main.o [1]
+menu_sprite_84x48       0x0084f6  0x210  Data  Gb  main.o [1]
+millis                  0x0096ac    0x6  Code  Gb  tim4millis.o [1]
+move_snake              0x009394   0x33  Code  Gb  Snake.o [1]
+nokia_clear             0x00944b   0x28  Code  Gb  nokia.o [1]
+nokia_clearBuffer       0x00964c    0xe  Code  Gb  nokia.o [1]
+nokia_draw_pixel        0x008c0a   0xde  Code  Gb  nokia.o [1]
+nokia_init              0x009422   0x29  Code  Gb  nokia.o [1]
+nokia_read_pixel        0x0090e6   0x5c  Code  Gb  nokia.o [1]
+nokia_setpos            0x0095d1   0x18  Code  Gb  nokia.o [1]
+nokia_update            0x009544   0x20  Code  Gb  nokia.o [1]
+pcd8544_sendbyte        0x0092f4   0x36  Code  Gb  nokia.o [1]
+rand                    0x008d8f   0x94  Code  Gb  rand.o [4]
+read_button             0x009282   0x3b  Code  Gb  Buttons.o [1]
+read_snakeMas           0x00932a   0x36  Code  Gb  Snake.o [1]
+send_cmd                0x0096a5    0x7  Code  Gb  nokia.o [1]
+send_data               0x00969e    0x7  Code  Gb  nokia.o [1]
+srand                   0x00949b   0x27  Code  Gb  srand.o [4]
+start_pingPong          0x008080  0x249  Code  Gb  PingPong.o [1]
+start_snake             0x0082c9  0x22d  Code  Gb  Snake.o [1]
+start_tetris            0x0094c2   0x26  Code  Gb  Tetris.o [1]
+states                  0x0000a6    0x1  Data  Gb  Snake.o [1]
+update_interval         0x0096bf    0x4  Data  Gb  Snake.o [1]
+update_interval_button  0x0096c3    0x4  Data  Gb  Snake.o [1]
+write_snakeMas          0x008fb0   0x71  Code  Gb  Snake.o [1]
+
+
+[1] = D:\Study\MC\STM8_SNAKE\Debug\Obj
+[2] = command line
+[3] = dbgstm8smd.a
+[4] = dlstm8smn.a
+
+  4 985 bytes of readonly  code memory
+    869 bytes of readonly  data memory
+    928 bytes of readwrite data memory (+ 23 absolute)
+
+Errors: none
+Warnings: none
