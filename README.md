@@ -1,2 +1,3 @@
 # STM8_SNAKE
-dasda
+Three games for STM8 (Snake+, ping_pong+, tetris-)
+work in progress...
